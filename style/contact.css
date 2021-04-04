@@ -1,0 +1,28 @@
+.header-text-sm {
+  font-family: Montserrat;
+  font-weight: lighter;
+  font-size: 32px;
+  line-height: 36px;
+  color: white !important;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 3px 6px black;
+  text-shadow: 0 3px 6px black; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-attachment: fixed;
+  background-image: url("../image/background2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+@media only screen and (max-width: 600px) {
+  .header-text-sm {
+    font-size: 22px !important;
+    line-height: 24px !important;
+    color: white;
+    text-transform: uppercase; } }
+
+/*# sourceMappingURL=contact.css.map */

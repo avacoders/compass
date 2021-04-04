@@ -1,0 +1,124 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register - Compass Center</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/contactform.css">
+    <link href="https://fonts.googleapis.com/css2?family=Suranna&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<main>
+    <section class="container">
+        <div class="row p-0 justify-content-center">
+            <div class="col-lg-6 ">
+
+                <form id="contact-form" class="contact-form position-relative p-5" method="post" action="contact.php">
+
+                    <div class="header-text-sm mb-5  text-center">Ro'yxatdan o'tish</div>
+                    <div class="row mb-5">
+                        <div class="col-6">
+                                <div class="input-placeholder  text-left">
+                                    Ism*
+                                </div>
+                                <input type="text" name="ism" class="input-1">
+                            </div>
+                        <div class="col-6">
+                            <div class="input-placeholder text-left">
+                                Familiya*
+                            </div>
+                            <input type="text" name="familiya" class="input-1">
+                        </div>
+
+                    </div>
+                    <div class="row mb-5">
+                        <div class="col-12">
+                            <div class="input-placeholder  text-left">
+                                Telefon*
+                            </div>
+                            <input type="text" name="tel" class="input-1" value="+998">
+                        </div>
+
+                    </div>
+                    <div class="row mb-5">
+                        <div class="col-12">
+                            <div class="input-placeholder  text-left">
+                                O'zingiz haqingizda ma'lumot
+                            </div>
+                            <textarea name="message" id="" class="w-100 bg-transparent border mt-4 main-text" cols="30" rows="5"></textarea>
+                        </div>
+
+                    </div>
+                    <div class="position-absolute submit-out w-100">
+                        <button type="submit" class="submit mx-auto ">Yuborish</button>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+
+                <div class="modal-body text-dark shadow-none p-4">
+                    <div class="submitted"><h5>Arizangiz qabul qilindi
+                        <br>Tez orada konsultantlarimiz siz bilan bog'lanishadi
+                    </h5></div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal" id="yopish">Yopish</button>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<script src="js/jquery-3.3.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script>
+
+    $( "#select-subject" ).click(function() {
+        $('.hide').toggleClass('select-anim');
+    });
+    $("#subject-1").click(function () {
+        $('.select-value').text(document.getElementById("subject-1").innerHTML);
+        $('.hide').removeClass('select-anim');
+        }
+    );
+    $("#subject-2").click(function () {
+            $('.select-value').text(document.getElementById("subject-2").innerHTML);
+            $('.hide').removeClass('select-anim');
+        }
+    );
+    $("#subject-3").click(function () {
+            $('.select-value').text(document.getElementById("subject-3").innerHTML);
+            $('.hide').removeClass('select-anim');
+        }
+    );
+    $("#subject-4").click(function () {
+            $('.select-value').text(document.getElementById("subject-4").innerHTML);
+            $('.hide').removeClass('select-anim');
+        }
+    );
+
+
+    $(window).on('load',function(){
+        $('#myModal').modal('show');
+    });
+
+</script>
+
+</body>
+</html>

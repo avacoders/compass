@@ -1,0 +1,79 @@
+@mixin head{
+  font-family: Montserrat;
+  font-weight: lighter;
+  font-size: 32px;
+  line-height: 36px;
+  color: white!important;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 3px 6px black;
+  text-shadow: 0 3px 6px black;
+
+}
+
+
+
+@mixin head-sm{
+  font-weight: lighter;
+  font-size: 26px!important;
+  line-height: 24px!important;
+  color: white!important;
+  text-align: center;
+  text-shadow: 0 3px 6px black;
+  text-transform: uppercase;
+
+}
+@mixin head-sm-sm{
+  font-size: 22px!important;
+  line-height: 24px!important;
+  color: white;
+  text-transform: uppercase;
+
+}
+
+@mixin main-text{
+  font-family: Montserrat;
+  font-weight: lighter;
+  font-size: 16px!important;
+  line-height: 18px;
+  color: white!important;
+  text-align: center;
+  text-shadow: 0 3px 6px black;
+}
+$text-shadow: 0 3px 6px black;
+
+$box-shadow: 0 5px 25px black;
+$white : white;
+$hira: rgb(0, 0, 0);
+$black : black;
+$transparent : transparent;
+$maincolor: #07080D;
+
+
+
+.header-text-sm{
+  @include head;
+}
+
+html, body {
+  height:100%;
+  margin:0;
+  padding:0;
+  background-attachment: fixed;
+  background-image: url("../image/background2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+  .header-text-sm{
+    @include head-sm-sm;
+  }
+
+}

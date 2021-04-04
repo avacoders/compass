@@ -1,0 +1,205 @@
+@mixin head{
+  font-family: Montserrat;
+  font-weight: lighter;
+  font-size: 32px;
+  line-height: 36px;
+  color: white!important;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 3px 6px black;
+  text-shadow: 0 3px 6px black;
+
+}
+
+@mixin head-sm{
+  font-weight: lighter;
+  font-size: 26px!important;
+  line-height: 24px!important;
+  color: white!important;
+  text-align: center;
+  text-shadow: 0 3px 6px black;
+  text-transform: uppercase;
+
+}
+@mixin head-sm-sm{
+  font-size: 22px!important;
+  line-height: 24px!important;
+  color: white;
+  text-transform: uppercase;
+
+}
+
+@mixin main-text{
+  font-family: Montserrat;
+  font-weight: lighter;
+  font-size: 16px!important;
+  line-height: 18px;
+  color: white;
+  text-shadow: 0 3px 6px black;
+}
+$text-shadow: 0 3px 6px black;
+
+$box-shadow: 0 5px 25px black;
+$white : white;
+$hira: rgb(0, 0, 0);
+$black : black;
+$transparent : transparent;
+$maincolor: #07080D;
+
+
+
+.header-text-sm{
+  @include head;
+}
+.main-text{
+  @include main-text;
+}
+
+html, body {
+  height:100%;
+  margin:0;
+  padding:0;
+  background-attachment: fixed;
+  background-image: url("../image/background2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+
+.contact-form{
+
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.38);
+  border-radius: 20px;
+  margin-top: 50px;
+  border: 2px solid white;
+
+  .input-placeholder{
+    text-align: left;
+    @include main-text;
+  }
+  .input-1{
+    width: 100%;
+    height: 100%;
+    background-color: $transparent;
+    @include head-sm-sm;
+    text-shadow: $text-shadow;
+    text-align: left;
+    border: 0;
+    border-bottom: 2px solid $white;
+    padding-left: 5px;
+  }
+  .input-1:focus{
+    outline: none;
+  }
+}
+
+.select-group{
+  width: 40%;
+  height: 100px;
+  .select-value{
+    text-align: left;
+    cursor: pointer;
+     width: 100%;
+  height: 30px!important;
+  border-style: none;
+  border-radius: 5px;
+  @include head-sm-sm;
+    text-shadow: $text-shadow;
+  background-color: $transparent;
+  outline: none;
+}
+
+
+  .select-value:hover + .select-option{
+
+  }
+  .select-option{
+    @include main-text;
+    height: 30px;
+    transition: 0.2s;
+
+  }
+}
+
+.select-anim{
+  animation-name: select-item;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.hide {
+  transform: rotateX(-90deg) translateY(-30px);
+  @include main-text;
+  transition: 0.3s;
+  background-color: $transparent;
+  border: 0;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.hide:hover{
+  color: $black;
+}
+.sel-group{
+
+  top:30px;
+  height: 50px;
+  width: 100%;
+  transition: 0.5s;
+}
+
+.submit-out{
+  bottom: 30px;
+}
+.submit{
+  border: 1px solid $white ;
+  border-radius: 10px;
+  transition: 0.2s;
+  height: 50px;
+  width: 200px;
+  @include main-text;
+  text-align: center;
+  background-color: $transparent;
+  color: $white;
+}
+.submit:hover{
+  background-color: $white;
+  color: $black!important;
+}
+
+.myDIV:hover + .sel-group {
+  color: red;
+}
+
+@keyframes select-item {
+  from{
+    transform: rotateX(90deg) translateY(-30px);
+
+  }
+  to{
+    transform: rotateX(0) translateY(0);
+
+  }
+
+}
+@keyframes select-item-out {
+  from{
+    transform: rotateX(0) translateY(0);
+
+  }
+  to{
+    transform: rotateX(90deg) translateY(-30px);
+
+  }
+
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  .header-text-sm{
+    @include head-sm-sm;
+  }
+
+}
